@@ -1,0 +1,8 @@
+from scipy.stats import binom
+
+n = 15     # Total number of trials
+p = 0.3    # Probability of success in each trial
+k = 5      # Number of desired successes
+
+probability = binom.pmf(k, n, p)
+print(probability)
