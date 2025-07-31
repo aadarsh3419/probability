@@ -1,0 +1,10 @@
+from scipy.stats import nbinom
+
+# Parameters
+r = 3  # number of successes
+p = 0.4  # probability of success
+x = 5  # number of failures
+
+# PMF
+prob = nbinom.pmf(x, r, p)
+print(f"Probability of 5 failures before 3 successes: {prob:.4f}")
