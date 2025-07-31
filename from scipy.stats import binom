@@ -1,0 +1,10 @@
+from scipy.stats import binom
+
+n = 5    # number of trials
+p = 0.2  # probability of success
+k = 2    # number of successes
+
+# PMF - Probability Mass Function
+probability = binom.pmf(k, n, p)
+
+print(probability)
