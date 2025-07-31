@@ -1,6 +1,7 @@
 # 🎲 Probability in Python – Aadarsh's Full Practice Zone
 
-![Probability](https://raw.githubusercontent.com/aadarsh3419/data_anaylyst/main/assets/probability_banner.png)
+![Project Pipeline](https://media.licdn.com/dms/image/v2/C4D22AQEtvYIdr07T5g/feedshare-shrink_800/feedshare-shrink_800/0/1642464540245?e=1756944000&v=beta&t=5gpIkeBU2Ay2p9UXMdCnCz5t7f2cgNxjmX5lGxaOPkU))
+
 
 Welcome to the **Probability** section of my Data Science journey.  
 This folder contains **all the probability topics I'm learning** — from basics to advanced — implemented in Python with clear examples, real-world logic, formulas, and clean code.
