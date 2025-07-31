@@ -1,0 +1,12 @@
+# Given values
+P_D = 0.02          # P(Disease)
+P_not_D = 0.98      # P(No Disease)
+P_Pos_given_D = 0.90        # P(Positive | Disease)
+P_Pos_given_not_D = 0.05    # P(Positive | No Disease)
+
+# Bayes' Theorem
+numerator = P_Pos_given_D * P_D
+denominator = (P_Pos_given_D * P_D) + (P_Pos_given_not_D * P_not_D)
+P_D_given_Pos = numerator / denominator
+
+print("P(Disease | Positive):", round(P_D_given_Pos, 4))
