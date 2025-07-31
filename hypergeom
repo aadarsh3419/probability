@@ -1,0 +1,11 @@
+from scipy.stats import hypergeom
+
+# Parameters
+N = 10     # total items
+K = 4      # total success items
+n = 3      # number of draws
+k = 2      # number of success in draws
+
+# Hypergeometric Probability
+prob = hypergeom.pmf(k, N, K, n)
+print(f"Probability of getting exactly {k} red balls: {prob:.4f}")
