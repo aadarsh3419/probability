@@ -1,0 +1,21 @@
+"""
+📈 PDF – Probability Density Function (Continuous Random Variable)
+
+This script shows how to calculate PDF using a Normal (Gaussian) distribution.
+"""
+
+from scipy.stats import norm
+
+# Example scenario:
+# A dataset of heights is normally distributed with mean 170 cm and std deviation 10 cm.
+# What is the density (PDF) at 180 cm?
+
+mu = 170     # mean
+sigma = 10   # standard deviation
+x = 180      # point to calculate PDF at
+
+# PDF = f(x)
+pdf_value = norm.pdf(x, mu, sigma)
+
+print("📈 PDF Example (Normal Distribution)")
+print(f"PDF at x = {x} in N({mu}, {sigma}²) =", round(pdf_value, 4))
