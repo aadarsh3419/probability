@@ -1,0 +1,20 @@
+"""
+✅ Discrete Uniform Distribution – Equal Likelihood Example
+
+This script calculates the probability of getting a specific value from a fair die.
+"""
+
+from scipy.stats import randint
+
+# Define uniform distribution for a fair die: values 1 to 6
+low = 1
+high = 7  # upper bound is exclusive in scipy's randint
+
+die_distribution = randint(low, high)
+
+# Get probability of rolling a 3
+value = 3
+prob = die_distribution.pmf(value)
+
+print("🎲 Uniform Distribution Example")
+print(f"Probability of rolling a {value} = {prob}")
