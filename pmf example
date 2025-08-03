@@ -1,0 +1,20 @@
+"""
+🎯 PMF – Probability Mass Function (Discrete Random Variable)
+
+This script shows how to calculate the PMF using the Binomial distribution.
+"""
+
+from scipy.stats import binom
+
+# Example scenario:
+# Toss a coin 10 times, what's the probability of getting exactly 4 heads?
+
+n = 10         # total trials
+p = 0.5        # probability of success (getting a head)
+k = 4          # number of desired successes
+
+# PMF = P(X = k)
+pmf_value = binom.pmf(k, n, p)
+
+print("🎯 PMF Example")
+print(f"P(X = {k}) in Binomial({n}, {p}) =", round(pmf_value, 4))
