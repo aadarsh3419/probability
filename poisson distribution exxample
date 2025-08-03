@@ -1,0 +1,20 @@
+"""
+📈 Poisson Distribution – Rare Events Modeling
+
+This script demonstrates how to calculate Poisson probability.
+"""
+
+from scipy.stats import poisson
+
+# Example:
+# A call center receives 4 calls per hour on average.
+# What’s the probability they get exactly 6 calls in an hour?
+
+λ = 4  # average rate (lambda)
+k = 6  # number of actual events
+
+# P(X = k)
+probability = poisson.pmf(k, λ)
+
+print("📈 Poisson Distribution Example")
+print(f"P(X = {k}) when λ = {λ} =", round(probability, 4))
