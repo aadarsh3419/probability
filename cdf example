@@ -1,0 +1,21 @@
+"""
+📉 CDF – Cumulative Distribution Function
+
+This script demonstrates how to calculate CDF using Normal distribution.
+"""
+
+from scipy.stats import norm
+
+# Example:
+# Height of students is normally distributed with mean 170 cm and std 10 cm.
+# What is the probability a student is shorter than or equal to 180 cm?
+
+mu = 170     # mean
+sigma = 10   # standard deviation
+x = 180      # value for CDF
+
+# CDF = P(X <= x)
+cdf_value = norm.cdf(x, mu, sigma)
+
+print("📉 CDF Example (Normal Distribution)")
+print(f"P(X <= {x}) in N({mu}, {sigma}²) =", round(cdf_value, 4))
