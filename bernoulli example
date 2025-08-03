@@ -1,0 +1,21 @@
+"""
+✅ Bernoulli Distribution – Single Trial Probability
+
+This script calculates success/failure probability using Bernoulli distribution.
+"""
+
+from scipy.stats import bernoulli
+
+# Probability of success (e.g., getting Heads)
+p = 0.7
+
+# Create Bernoulli distribution
+dist = bernoulli(p)
+
+# Probabilities
+success_prob = dist.pmf(1)  # P(X = 1)
+failure_prob = dist.pmf(0)  # P(X = 0)
+
+print("✅ Bernoulli Distribution Example")
+print(f"P(Success) = {success_prob}")
+print(f"P(Failure) = {failure_prob}")
