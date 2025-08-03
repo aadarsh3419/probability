@@ -1,0 +1,30 @@
+"""
+📘 Bayes' Theorem - Real World Example: Medical Testing
+
+This script demonstrates Bayes' Theorem to calculate the probability
+of actually having a disease given a positive test result.
+
+Problem:
+- A disease affects 2% of the population.
+- The test has:
+    ✅ 90% True Positive Rate (Sensitivity)
+    ❌ 5% False Positive Rate (False alarm when person is healthy)
+
+Goal:
+- Given a person tests positive, what is the probability they truly have the disease?
+"""
+
+# Given probabilities
+P_D = 0.02                      # P(Disease)
+P_not_D = 1 - P_D               # P(No Disease)
+P_Pos_given_D = 0.90           # P(Positive | Disease)
+P_Pos_given_not_D = 0.05       # P(Positive | No Disease)
+
+# Bayes’ Theorem: P(Disease | Positive)
+numerator = P_Pos_given_D * P_D
+denominator = (P_Pos_given_D * P_D) + (P_Pos_given_not_D * P_not_D)
+P_D_given_Pos = numerator / denominator
+
+# Print the result
+print("📊 Probability of having disease given a positive test result:")
+print("P(Disease | Positive) =", round(P_D_given_Pos, 4))  # Rounded to 4 decimal places
