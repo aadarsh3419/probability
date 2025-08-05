@@ -1,0 +1,13 @@
+from scipy.stats import norm
+
+mean = 0
+std_dev = 1
+
+# PDF at x = 1
+pdf_val = norm.pdf(1, mean, std_dev)
+
+# CDF at x = 1
+cdf_val = norm.cdf(1, mean, std_dev)
+
+print("PDF at x=1:", pdf_val)
+print("CDF at x=1:", cdf_val)
