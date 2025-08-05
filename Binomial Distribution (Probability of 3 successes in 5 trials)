@@ -1,0 +1,8 @@
+from scipy.stats import binom
+
+n = 5
+p = 0.6
+k = 3
+
+prob = binom.pmf(k, n, p)
+print("P(X = 3):", prob)
