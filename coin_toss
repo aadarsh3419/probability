@@ -1,0 +1,7 @@
+import random
+
+# Simulate 100 coin tosses
+tosses = [random.choice(['Heads', 'Tails']) for _ in range(100)]
+prob_heads = tosses.count('Heads') / 100
+
+print("Experimental Probability of Heads:", prob_heads)
