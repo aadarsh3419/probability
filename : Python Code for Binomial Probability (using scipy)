@@ -1,0 +1,9 @@
+from scipy.stats import binom
+
+# Probability of exactly 3 successes in 10 trials with p = 0.4
+n = 10
+p = 0.4
+x = 3
+
+prob = binom.pmf(x, n, p)
+print(f"Probability of 3 successes: {prob}")
