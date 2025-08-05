@@ -1,0 +1,10 @@
+from math import comb
+
+# Total ways to choose 2 balls from 8
+total_ways = comb(8, 2)
+
+# Ways to choose 2 red balls from 5
+favorable_ways = comb(5, 2)
+
+prob = favorable_ways / total_ways
+print("Probability of choosing 2 red balls:", prob)
