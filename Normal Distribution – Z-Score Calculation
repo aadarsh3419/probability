@@ -1,0 +1,9 @@
+import scipy.stats as stats
+
+x = 75
+mean = 70
+std = 10
+
+z = (x - mean) / std
+prob = stats.norm.cdf(z)
+print("P(X ≤ 75):", prob)
