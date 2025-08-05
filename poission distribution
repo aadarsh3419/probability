@@ -1,0 +1,13 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+λ = 4
+x = np.arange(0, 15)
+pmf_values = poisson.pmf(x, λ)
+
+plt.bar(x, pmf_values)
+plt.title("Poisson Distribution (λ=4)")
+plt.xlabel("Number of events (x)")
+plt.ylabel("Probability")
+plt.grid(True)
+plt.show()
