@@ -1,0 +1,11 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+population = np.random.exponential(scale=2, size=10000)
+sample_means = [np.mean(np.random.choice(population, size=30)) for _ in range(1000)]
+
+plt.hist(sample_means, bins=30, edgecolor='black')
+plt.title("Central Limit Theorem – Sampling Distribution")
+plt.xlabel("Sample Means")
+plt.ylabel("Frequency")
+plt.show()
