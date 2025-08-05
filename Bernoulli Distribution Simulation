@@ -1,0 +1,12 @@
+from scipy.stats import bernoulli
+import matplotlib.pyplot as plt
+
+p = 0.7  # probability of success
+data = bernoulli.rvs(p, size=1000)
+
+plt.hist(data, bins=2, edgecolor='black')
+plt.title("Bernoulli Distribution (p=0.7)")
+plt.xticks([0, 1], ['Failure (0)', 'Success (1)'])
+plt.xlabel("Outcome")
+plt.ylabel("Frequency")
+plt.show()
