@@ -1,0 +1,8 @@
+import random
+
+def coin_toss_simulation(trials=1000):
+    heads = sum(1 for _ in range(trials) if random.choice(['H', 'T']) == 'H')
+    probability = heads / trials
+    return probability
+
+print("Estimated Probability of Heads:", coin_toss_simulation(100000))
