@@ -1,0 +1,13 @@
+import random
+
+class Solution(object):
+    def rollDiceProbability(self, trials=10000):
+        count = 0
+        for _ in range(trials):
+            if random.randint(1, 6) + random.randint(1, 6) == 7:
+                count += 1
+        return count / trials
+
+# Example
+sol = Solution()
+print(sol.rollDiceProbability(100000))  # Approx 0.167
