@@ -1,0 +1,66 @@
+def bayes_theorem(prior_A, prior_B, likelihood_B_given_A):
+    """
+    Bayes Theorem Formula:
+        P(A|B) = (P(B|A) * P(A)) / P(B)
+    
+    Parameters:
+        prior_A: float -> P(A)
+        prior_B: float -> P(B)
+        likelihood_B_given_A: float -> P(B|A)
+    
+    Returns:
+        posterior: float -> P(A|B)
+    """
+    posterior = (likelihood_B_given_A * prior_A) / prior_B
+    return posterior
+
+
+# Example 1: Disease Test
+# P(Disease) = 0.01
+# P(No Disease) = 0.99
+# P(Positive Test | Disease) = 0.95
+# P(Positive Test | No Disease) = 0.10
+
+prior_disease = 0.01
+prior_no_disease = 0.99
+p_positive_given_disease = 0.95
+p_positive_given_no_disease = 0.10
+
+# Total probability of Positive Test (Law of Total Probability)
+p_positive = (p_positive_given_disease * prior_disease) + \
+             (p_positive_given_no_disease * prior_no_disease)
+
+# Bayes Theorem: P(Disease | Positive Test)
+posterior = bayes_theorem(prior_disease, p_positive, p_positive_given_disease)
+
+print(f"Probability of Disease given Positive Test: {posterior:.4f} ({posterior*100:.2f}%)")
+
+
+
+# --- 2. Naive Bayes Classifier Example ---
+from sklearn.model_selection import train_test_split
+from sklearn.naive_bayes import GaussianNB
+from sklearn.metrics import accuracy_score
+
+# Simple dataset: [Height, Weight]
+X = [
+    [180, 80], [175, 70], [160, 55], [170, 65],
+    [165, 60], [155, 50], [185, 90], [150, 45]
+]
+y = ["Male", "Male", "Female", "Male",
+     "Female", "Female", "Male", "Female"]
+
+# Split dataset
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, random_state=42)
+
+# Train Naive Bayes model
+model = GaussianNB()
+model.fit(X_train, y_train)
+
+# Predict
+y_pred = model.predict(X_test)
+
+print("\nNaive Bayes Classifier Results:")
+print("Predictions:", y_pred)
+print("Actual:     ", y_test)
+print("Accuracy:", accuracy_score(y_test, y_pred))
